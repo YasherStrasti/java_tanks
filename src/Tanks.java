@@ -1,20 +1,18 @@
-class LevelTanks {
-    int level;
-}
+import levels.LevelTanks;
+
 public class Tanks {
     public static void main(String[] args){
-        LevelTanks tank1 = new LevelTanks();
-        LevelTanks tank2 = new LevelTanks();
+        LevelTanks tank1 = new LevelTanks(10, "abc", true);
+        LevelTanks tank2 = new LevelTanks(15, "edf", false);
 
-        tank1.level = 2;
-        tank2.level = 57;
-
-        System.out.println("1. Уровень первого танка: " + tank1.level + "\n " + "  Уровень второго танка: " + tank2.level);
+        System.out.println("1. Уровень первого танка: " + tank1.getLevel() + "\n " + "  Уровень второго танка: " + tank2.getLevel());
 
         tank1 = tank2;
-        System.out.println("2. Уровень первого танка: " + tank1.level + "\n " + "  Уровень второго танка: " + tank2.level);
+        System.out.println("2. Уровень первого танка: " + tank1.getLevel() + "\n " + "  Уровень второго танка: " + tank2.getLevel());
 
-        tank1.level = 27;
-        System.out.println("3. Уровень первого танка: " + tank1.level + "\n " + "  Уровень второго танка: " + tank2.level);
+        tank1.setLevel(27);
+        System.out.println("3. Уровень первого танка: " + tank1.getLevel() + "\n " + "  Уровень второго танка: " + tank2.getLevel());
+
     }
+
 }
